@@ -16,10 +16,10 @@ gulp.task('clean', function() {
     return del(['./dist'])
 })
 
-gulp.task('copy-images', function() {
-    return gulp.src('./src/statics/images/*')
-        .pipe(gulp.dest('./dist/statics/images'))
-})
+// gulp.task('copy-images', function() {
+//     return gulp.src('./src/statics/images/*')
+//         .pipe(gulp.dest('./dist/statics/images'))
+// })
 
 gulp.task('images', function() {
     gulp.src('./src/statics/images/*.*')
