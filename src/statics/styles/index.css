@@ -1,0 +1,41 @@
+body {
+    background: #fff url(../images/IMG_69266914560F-42.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+a {
+    color: #217ac0;
+    text-decoration: none
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: silver;
+    text-align: center;
+    z-index: 99;
+}
+
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    margin-bottom: 60px;
+    width: 600px;
+}
+
+.inner {
+    padding: 20px 20px;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        margin: 0px;
+        width: 100%;
+    }
+    .inner {
+        padding: 20px 10px;
+    }
+}
