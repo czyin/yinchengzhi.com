@@ -1,4 +1,5 @@
 body {
+    background-color: #fff;
     background: #fff url(../images/IMG_69266914560F-42.jpeg) no-repeat center center fixed;
     background-size: cover;
 }
@@ -9,11 +10,7 @@ a {
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: silver;
+    padding-top: 20px;
     text-align: center;
     z-index: 99;
 }
@@ -22,7 +19,6 @@ footer {
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
     margin: 10px;
-    margin-bottom: 60px;
     width: 600px;
 }
 
@@ -31,7 +27,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .ps {
+        display: none;
+    }
+    body {
+        background-image: none;
+    }
     .wrapper {
+        box-shadow: none;
         margin: 0px;
         width: 100%;
     }
