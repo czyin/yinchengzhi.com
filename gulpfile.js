@@ -8,16 +8,30 @@ const rename = require('gulp-rename')
 const concat = require('gulp-concat')
 const rev = require('gulp-rev')
 const revCollector = require('gulp-rev-collector')
+const imagemin = require('gulp-imagemin')
 
 // const uglify = require('gulp-uglify')
 
-gulp.task('clean', function(cb) {
-    del(['./dist'], cb)
+gulp.task('clean', function() {
+    return del(['./dist'])
 })
 
 gulp.task('copy-images', function() {
     return gulp.src('./src/statics/images/*')
         .pipe(gulp.dest('./dist/statics/images'))
+})
+
+gulp.task('images', function() {
+    gulp.src('./src/statics/images/*.*')
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('./dist/statics/images'))
+})
+
+
+gulp.task('clean-styles', function() {
+    return del(['./dist/statics/styles'])
 })
 
 gulp.task('styles', function() {
@@ -50,12 +64,13 @@ gulp.task('rev-collector', ['styles'], function() {
 })
 
 gulp.task('watch', function() {
-    var watch_styles = gulp.watch(['./src/views/**/*.html','./src/statics/styles/*.css'], ['rev-collector']);
+    var watch_styles = gulp.watch(['./src/views/**/*.html', './src/statics/styles/*.css'], ['clean-styles', 'rev-collector'])
     watch_styles.on('change', function(event) {
-        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    });
-});
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
+    })
+})
 
-gulp.task('build', ['copy-images', 'rev-collector'])
+gulp.task('build', ['images', 'rev-collector'])
+    // gulp.task('build', ['copy-images', 'rev-collector'])
 
 gulp.task('default', ['clean'])
