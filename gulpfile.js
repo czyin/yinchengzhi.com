@@ -22,7 +22,7 @@ gulp.task('clean', function() {
 // })
 
 gulp.task('images', function() {
-    gulp.src('./src/statics/images/*.*')
+    return gulp.src('./src/statics/images/*.*')
         .pipe(imagemin({
             progressive: true
         }))
