@@ -4,7 +4,7 @@
   "private": true,
   "description": "yinchengzhi.com",
   "scripts": {
-    "gulp": "gulp clean & gulp build",
+    "gulp": "gulp clean && gulp build",
     "dev": "npm run gulp && gulp watch & cross-env NODE_ENV=development node server.js",
     "publish": "npm run gulp"
   },
