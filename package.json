@@ -1,44 +1,46 @@
 {
-    "name": "yinchengzhi.com",
-    "version": "1.0.0",
-    "private": true,
-    "description": "yinchengzhi.com",
-    "scripts": {
-        "gulp": "gulp clean & gulp build",
-        "dev": "npm run gulp && gulp watch & cross-env NODE_ENV=development node server.js",
-        "publish": "npm run gulp"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/czyin/yinchengzhi.com.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/czyin/yinchengzhi.com/issues"
-    },
-    "homepage": "https://github.com/czyin/yinchengzhi.com#readme",
-    "dependencies": {
-        "consolidate": "^0.14.5",
-        "express": "^4.14.0",
-        "gulp-imagemin": "^3.1.1",
-        "mustache": "^2.3.0",
-        "normalize.css": "^5.0.0"
-    },
-    "devDependencies": {
-        "autoprefixer": "^6.6.0",
-        "cross-env": "^3.1.3",
-        "cssnano": "^3.9.1",
-        "del": "^2.2.2",
-        "gulp": "^3.9.1",
-        "gulp-concat": "^2.6.1",
-        "gulp-postcss": "^6.2.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-rev": "^7.1.2",
-        "gulp-rev-collector": "^1.1.1",
-        "gulp-sourcemaps": "^1.9.1",
-        "gulp-uglify": "^2.0.0",
-        "opn": "^4.0.2"
-    }
+  "name": "yinchengzhi.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "yinchengzhi.com",
+  "scripts": {
+    "gulp": "gulp clean & gulp build",
+    "dev": "npm run gulp && gulp watch & cross-env NODE_ENV=development node server.js",
+    "publish": "npm run gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czyin/yinchengzhi.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/czyin/yinchengzhi.com/issues"
+  },
+  "homepage": "https://github.com/czyin/yinchengzhi.com#readme",
+  "dependencies": {
+    "consolidate": "^0.14.5",
+    "express": "^4.14.0",
+    "gulp-imagemin": "^3.1.1",
+    "mustache": "^2.3.0",
+    "normalize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.0",
+    "cross-env": "^3.1.3",
+    "cssnano": "^3.9.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-extend": "^1.1.6",
+    "gulp-layout": "0.0.4",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.1.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "opn": "^4.0.2"
+  }
 }
